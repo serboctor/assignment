@@ -33,4 +33,10 @@ func TestCountTokens(t *testing.T) {
 	if _, err := CountTokens(letters); err == nil {
 		t.Errorf("Test failed for %+q", letters)
 	}
+
+	// test list with numbers and signs
+	letters = []string{"2", " ", "+", " ", "2"}
+	if count, _ := CountTokens(letters); count != 3 {
+		t.Errorf("Test failed for %+q", letters)
+	}
 }
