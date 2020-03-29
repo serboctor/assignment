@@ -2,8 +2,6 @@ package main
 
 import "errors"
 
-
-
 // CountTokens counts tokens representing a complete word in a list of strings.
 func CountTokens(list []string) (int, error) {
 
